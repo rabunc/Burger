@@ -1,4 +1,5 @@
-var connection = require("connection.js")
+var connection = require("./connection.js");
+// ./ says this is a file on my computer, NOT an npm module
 
 var orm = {
     selectAll: function(cb) {
@@ -17,8 +18,8 @@ var orm = {
             cb(result)
         })
     },
-    updateOne: function(burger, cb) {
-        connection.query("UPDATE burgers SET devoured = 1 WHERE burger_name = ?;", [burger], function(err, result) {
+    updateOne: function(burger_id, cb) {
+        connection.query("UPDATE burgers SET devoured = 1 WHERE id = ?;", [burger_id], function(err, result) {
             if (err) {
                 throw err;
             }
@@ -27,4 +28,4 @@ var orm = {
     }
 }
 
-module.exports = orm
+module.exports = orm;
