@@ -9,7 +9,7 @@ var port = process.env.PORT || 3000;
 app.use(express.static("public"))
 app.use(methodOverride("_method"))
 app.use(bodyParser.urlencoded({ extended: false }))
-app.engine("handlebars", exphbs({ defaultLayout: "main" }))
+app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }))
 app.set("view engine", "handlebars")
 
 var routes = require("./controllers/burgers_controller.js")
