@@ -1,8 +1,8 @@
-<h1 id="page-title">Eat Da Burger!</h1>
-<img id="burger-icon" src="https://www.seriouseats.com/thmb/Po6tpVxaADjvMgyUo7c7OaxlATs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__09__20140918-jamie-olivers-comfort-food-insanity-burger-david-loftus-f7d9042bdc2a468fbbd50b10d467dafd.jpg"><img>
+<h1 id="page-title">Prayer.gg</h1>
+<img id="burger-icon" src="https://ibb.co/JshBDzS"><img>
 
 <div id="undevoured-burgers">
-    <h2>Burgers!</h2>
+    <h2>Prayer Requests!</h2>
 
     <ul>
         {{#each burgers}} {{#unless this.devoured}}
@@ -19,7 +19,7 @@
 </div>
 
 <div id="devoured-burgers">
-<h2>Devoured Burgers!</h2>
+<h2>Completed Prayers!</h2>
 <ul>
     {{#each burgers}} {{#if this.devoured}}
     <li>
@@ -30,13 +30,13 @@
 </ul>
 </div>
 
-<h2>Add a Burger</h2>
+<h2>Add a Prayer Request</h2>
 <form class="create-update-form" action="/" method="POST">
 
     <div class="form-group">
-        <label for="new_burger">Burger Name:</label>
+        <label for="new_burger">Prayer Request:</label>
         <input type="text" id="new_burger" name="burger_name">
     </div>
 
-    <button type="submit">Add Burger</button>
+    <button type="submit">Submit</button>
 </form>
